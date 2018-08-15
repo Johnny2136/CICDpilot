@@ -21,6 +21,6 @@
 1. Set environment variables
    * `export RAILS_SECRETS_YAML=${PWD}/config/secrets.yml`
    * `export RAILS_CONFIG_ENVIRONMENTS=${PWD}/config/environments`
-   * `export RAILS_DB_YAML=${PWD}/database.yml`
+   * `export RAILS_DB_YAML=${PWD}/config/database.yml`
 1. Run `./bin/rake db:migrate`
 1. Start server `./bin/rails server`
