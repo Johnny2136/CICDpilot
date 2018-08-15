@@ -8,7 +8,7 @@ class AddShortDescriptionNormalizedToStixPackages < ActiveRecord::Migration
     reversible do |dir|
       dir.up do
         # Populate the new column with data
-        execute "UPDATE STIX_PACKAGES SET SHORT_DESCRIPTION_NORMALIZED = SUBSTR(LOWER(SHORT_DESCRIPTION), 1, 255)"
+        execute "UPDATE stix_packages SET SHORT_DESCRIPTION_NORMALIZED = SUBSTR(LOWER(SHORT_DESCRIPTION), 1, 255)"
       end
       # No Down is needed, dropping the column is enough
     end
