@@ -1,4 +1,4 @@
-require 'stix'
+require 'ruby_stix'
 
 task :acs_migration, [:start, :batch_size] => :environment do |t, args|
   start = args.start || 0

@@ -1,7 +1,7 @@
 require 'net/sftp'
 require 'stringio'
 require 'json'
-require 'stix'
+require 'ruby_stix'
 
 namespace :disseminate do
   task :start => :environment do |t, args|

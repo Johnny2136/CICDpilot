@@ -84,7 +84,7 @@ class CreateStixKillChainsAgain < ActiveRecord::Migration
     else
       execute "INSERT INTO stix_kill_chains (definer, guid, is_default,
                   kill_chain_name, reference, stix_kill_chain_id)
-               VALUES ('LMCO', 'af3e707f-2fb9-49e5-8c37-14026ca0a5ff', 't',
+               VALUES ('LMCO', 'af3e707f-2fb9-49e5-8c37-14026ca0a5ff', 1,
                        'LM Cyber Kill Chain',
                        'http://www.lockheedmartin.com/content/dam/lockheed/data/corporate/documents/LM-White-Paper-Intel-Driven-Defense.pdf',
                        'stix:KillChain-af3e707f-2fb9-49e5-8c37-14026ca0a5ff')"

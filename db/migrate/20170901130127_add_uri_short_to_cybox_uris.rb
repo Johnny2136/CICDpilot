@@ -8,7 +8,7 @@ class AddUriShortToCyboxUris < ActiveRecord::Migration
     reversible do |dir|
       dir.up do
         # Populate the new column with data
-        execute "UPDATE CYBOX_URIS SET URI_SHORT = SUBSTR(URI_NORMALIZED, 1, 255)"
+        execute "UPDATE cybox_uris SET uri_short = SUBSTR(uri_normalized, 1, 255)"
       end
       # No Down is needed, dropping the column is enough
     end

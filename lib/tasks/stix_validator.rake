@@ -1,4 +1,4 @@
-require 'stix'
+require 'ruby_stix'
 
 namespace :stix_validator do
   ERR_NO_FILEPATH_SPECIFIED = 'A file path is required as the single ' +

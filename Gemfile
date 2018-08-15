@@ -20,8 +20,9 @@ gem "domain_name_validator"
 gem "public_suffix", '~>1.4.6' # Used to tell if domain name is valid: .art etc.
 gem "domain_name"
 gem 'nokogiri' # used to parse XML
-gem 'stix', git: 'git@devops-proto-three:/cyber-indicators/stix.git', :tag => 'v0.7.78'
+#gem 'stix', git: 'git@devops-proto-three:/cyber-indicators/stix.git', :tag => 'v0.7.78'
 # gem 'stix', path: "~/code/stix"
+gem 'ruby_stix', :git => "http://github.com/johnwunder/ruby-stix.git"
 gem 'net-sftp'
 gem 'rufus-scheduler'
 
@@ -30,7 +31,6 @@ platforms :ruby do
   gem 'therubyracer'
   gem 'sqlite3'
   gem 'sqlite3_ar_regexp', '~> 2.2'
-  gem 'pg'
 end
 
 # JRuby=v9.1.7.0 compatible to Ruby=v2.3
@@ -39,7 +39,7 @@ platforms :jruby do
   gem 'jruby-jars', '9.1.7.0'
   gem 'therubyrhino'
   gem 'warbler','>= 2.0.0'
-  gem 'activerecord-oracle_enhanced-adapter', '1.6.9'
+  gem 'activerecord-jdbcmysql-adapter', "1.3.24", :platform => :jruby
 end
 
 gem 'mime-types','2.99' # Required to be 2.99 for jruby
