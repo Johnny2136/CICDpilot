@@ -12,3 +12,11 @@ services:
       MYSQL_PASSWORD: secret
     ports:
       - 3306:3306
+  solr:
+    image: solr
+    user: solr
+    volumes:
+      - ${PWD}/solr:/tmp/solr
+    command: bin/post -c gettingstarted /tmp/solr/solr.xml
+    ports:
+      - 8983:8983
